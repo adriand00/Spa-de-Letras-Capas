@@ -38,8 +38,27 @@ class UI {
     /* Esta rutina limpia todo el texto de la consola */
     System.out.print("\033[H\033[2J");
     System.out.flush();
-  }// fin clear screen
-
+   }// fin clear screen
+  public static void user_Input(char pf_type){
+   if (pf_type == 'n') {
+     while ( !non_error ) {      
+       try {inputINT = in.nextInt(); non_error = true;} 
+       catch (Exception  ex )
+       {System.out.println("Opcion Invalida - Utilice numeros: " ); 
+        String borrar_entrada = in.next();}
+       }    
+       non_error = false;
+     } //fin char N
+   if (pf_type == 't') {
+     while ( !non_error ) {      
+       try {inputSTR = in.next(); non_error = true;} 
+       catch (Exception  ex )
+       {System.out.println("Opcion Invalida" ); 
+        String borrar_entrada = in.next();}
+       }    
+       non_error = false;
+     } //fin char t
+   }
   public static void menu() {
     /* Rutina para inicializar el menu */
     int user_select = 0; // Variable para detectar lo que el usuario seleccione
