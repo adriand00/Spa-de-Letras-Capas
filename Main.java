@@ -10,19 +10,19 @@
 import java.util.*;
 
 class Main {
-    public static void main(String[] arg) {
-      UI.menu();
-      CL.crearListaNumerosRandom();
-      CL.crearPalabras8();
-      CL.rellenarSopa();
-      UI.impSopa();
-      UI.impPalabras8();
-      UI.impPlayZone();
-      /* Admin Tools */
-      UI.impCheckTable();
-      UI.impLocations();
+  public static void main(String[] arg) {
+    UI.menu();
+    CL.crearListaNumerosRandom();
+    CL.crearPalabras8();
+    CL.rellenarSopa();
+    UI.impSopa();
+    UI.impPalabras8();
+    UI.impPlayZone();
+    /* Admin Tools */
+    UI.impCheckTable();
+    UI.impLocations();
     }// fin main
-  }
+  }//fin main
 
 class UI {
   public static Scanner in = new Scanner(System.in);
