@@ -9,7 +9,7 @@
 */
 import java.util.*;
 
-class Main {
+class Mainsa {
  public static void main(String[] arg) {
    UI.menu();
    CL.crearListaNumerosRandom();
@@ -22,7 +22,7 @@ class Main {
   /*             */
    }// fin main
  }// fin main
-class UI {
+class Nui {
   
   /*Variables Globales*/
   public static Scanner in = new Scanner(System.in);

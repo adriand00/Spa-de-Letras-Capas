@@ -1,4 +1,4 @@
-class CL {
+class Ncl {
 /*         Variables Publicas        */
 //palabra actualmente siendo localizada
 public static int current_word = 0;
