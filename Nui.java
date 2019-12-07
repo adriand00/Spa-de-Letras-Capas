@@ -21,8 +21,7 @@ class Main {
    UI.impLocations();
   /*             */
    }// fin main
-}// fin main
-
+ }// fin main
 class UI {
   
   /*Variables Globales*/

@@ -25,8 +25,14 @@ class Main {
   }//fin main
 
 class UI {
+  
+  /*Variables Globales*/
   public static Scanner in = new Scanner(System.in);
-  public static boolean non_error = false;
+  public static boolean non_error = false;// Var para detectar errores
+  public static int inputINT = 0;// Var para seleccion de usuario
+  public static String inputSTR = "";// Var para datos de usuario
+  public static int user_won = 0;//Var si el usuario gano
+
   /* Rutinas */
   public static void clearScreen() {
     /* Esta rutina limpia todo el texto de la consola */
