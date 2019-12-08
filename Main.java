@@ -100,28 +100,35 @@ class UI {
      clearScreen();
     
     } // fin de while
-  }// fin menu
-
+   }// fin menu
+  public static void jugar() {
+    do {
+     impSopa();
+     impPalabras8();
+     impPlayZone();
+     }
+     while (user_won <= 8);
+   }//fin jugar
   public static void impSopa() {
     clearScreen();
-    System.out.print("   A B C D E F G H I J K L"); // Imprimir una titulo para que el usuario ubique palabras
+    // Imprimir una titulo para que el usuario ubique palabras
+    System.out.print("   A B C D E F G H I J K L"); 
     System.out.println();
-    for (int i = 0; i < CL.spa.length; i++) { // Imprimir el Spa de letras
-      if (i >= 9) { // -----------------------// ************************************
-        System.out.print((i + 1) + " ");
-      } // ----// Imprime espacios antes del 1 al 9 **
-      else { // ----------------------------// para que el spa quede cuadriculado**
-        System.out.print(" " + (i + 1) + " ");
-      } // ************************************
-      for (int j = 0; j < CL.spa.length; j++) { // Imprime el Spa
-        System.out.print(CL.spa[i][j] + " ");
-      }
-      System.out.print(i + 1);// Imprime un numero al final de la linea para ayudar al usuario a ubicarse
+    //SPA
+    for (int i = 0; i < CL.spa.length; i++) { 
+      //Agrega numeros al inicio de cada fila
+      if (i >= 9) {System.out.print((i + 1) + " ");}else{System.out.print(" " + (i+1) + " ");}
+      //Imprime fila horizontal
+      for (int j = 0; j < CL.spa.length; j++) {
+        System.out.print(CL.spa[i][j] + " ");}
+      //Agrega numeros al final de cada fila
+      System.out.print(i + 1);
       System.out.println();
     }
-    System.out.println("   A B C D E F G H I J K L");// Imprimir un subtitulo para que el usuario ubique palabras
+    //Imprimir un subtitulo para que el usuario ubique palabras
+    System.out.println("   A B C D E F G H I J K L");
     System.out.println("=============================");
-  }// fin impSopa
+   }// fin impSopa
 
   public static void impPalabras8() {
     System.out.println("Encuentra estas palabras:");
@@ -150,7 +157,7 @@ class UI {
     } else {
       System.out.println("no");
     }
-  }// fin impPlayZone
+   }// fin impPlayZone
   /* Admin Tools */
 
   public static void error(int pf_Ecode) {

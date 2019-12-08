@@ -64,7 +64,7 @@ class Nui {
     while (user_already_CONFIG = false) {
      // INGRESO DE PALABRAS (if User select 1)
       if (inputINT == 1) { 
-        for (int i = 0; i < CapaLogica.palabras20.length; i++) {
+        for (int i = 0; i < CL.palabras20.length; i++) {
           clearScreen();
           System.out.println("----------------------------");
           System.out.println("Ingrese 20 palabras");
@@ -73,8 +73,8 @@ class Nui {
           System.out.println("Palabra " + (i + 1) + " de 20");
           user_Input('t');
           inputSTR.toLowerCase();
-          CapaLogica.palabras20[i] = inputSTR;
-          if (CapaLogica.palabras20[i].length() > 12) {
+          CL.palabras20[i] = inputSTR;
+          if (CL.palabras20[i].length() > 12) {
             i -= 1;} // No avanzar con palabras de mas de 12 chars
           clearScreen();
          }
@@ -106,19 +106,19 @@ class Nui {
      impPlayZone();
      }
      while (user_won <= 8);
-   }
+   } //fin jugar
   public static void impSopa() {
     clearScreen();
     // Imprimir un titulo para que el usuario ubique palabras
     System.out.print("   A B C D E F G H I J K L"); 
     System.out.println();
     //SPA
-    for (int i = 0; i < CapaLogica.spa.length; i++) {
+    for (int i = 0; i < CL.spa.length; i++) {
       //Agrega numeros al inicio de cada fila
-      if (i >= 9) {System.out.print((i + 1) + " ");} else {System.out.print(" " + (i + 1) + " ");} 
+      if (i >= 9) {System.out.print((i + 1) + " ");}else{System.out.print(" " + (i+1) + " ");}
       //Imprime fila horizontal
-      for (int j = 0; j < CapaLogica.spa.length; j++) {
-        System.out.print(CapaLogica.spa[i][j] + " ");}
+      for (int j = 0; j < CL.spa.length; j++) {
+        System.out.print(CL.spa[i][j] + " ");}
       //Agrega numeros al final de cada fila
       System.out.print(i + 1);
       System.out.println();
@@ -132,9 +132,9 @@ class Nui {
     System.out.println("Encuentra estas palabras:");
     int x = 0;
     // Imprime palabras8 en 2 columnas
-    for (int i = 0; i < CapaLogica.palabras8.length; i++) {
+    for (int i = 0; i < CL.palabras8.length; i++) {
       x = i + 1;
-      System.out.print(x + "-) " + CapaLogica.palabras8[i] + "  ");
+      System.out.print(x + "-) " + CL.palabras8[i] + "  ");
       if (x % 2 == 0)
       {System.out.println();}
     }
@@ -148,9 +148,9 @@ class Nui {
     
     user_Input('t');
    
-    for (int i = 0; i < CapaLogica.palabras8.length; i++)
-     if (inputSTR.equalsIgnoreCase(CapaLogica.palabras8[i]))
-     {CapaLogica.palabras8[i].toUpperCase(); user_won += 1;}
+    for (int i = 0; i < CL.palabras8.length; i++)
+     if (inputSTR.equalsIgnoreCase(CL.palabras8[i]))
+     {CL.palabras8[i].toUpperCase(); user_won += 1;}
    }// fin impPlayZone
  
   /* Admin Tools */
@@ -167,9 +167,9 @@ class Nui {
 
   public static void impCheckTable() {
     System.out.println();
-    for (int i = 0; i < CapaLogica.check.length; i++) {
-      for (int j = 0; j < CapaLogica.check.length; j++) {
-        System.out.print(CapaLogica.check[i][j] + " ");
+    for (int i = 0; i < CL.check.length; i++) {
+      for (int j = 0; j < CL.check.length; j++) {
+        System.out.print(CL.check[i][j] + " ");
       }
       System.out.println();
     }
@@ -177,8 +177,8 @@ class Nui {
 
   public static void impLocations() {
     System.out.println();
-    for (int i = 0; i < CapaLogica.locations_table.length; i++) {
-      System.out.print(CapaLogica.locations_table[i] + " ");
+    for (int i = 0; i < CL.locations_table.length; i++) {
+      System.out.print(CL.locations_table[i] + " ");
     }
    }// fin impLocations
 } // fin CapaUI

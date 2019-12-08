@@ -31,16 +31,6 @@
 			<location>//home/runner/Main.java</location>
 		</link>
 		<link>
-			<name>src/Ncl.java</name>
-			<type>1</type>
-			<location>//home/runner/Ncl.java</location>
-		</link>
-		<link>
-			<name>src/Nui.java</name>
-			<type>1</type>
-			<location>//home/runner/Nui.java</location>
-		</link>
-		<link>
 			<name>src/UI.java</name>
 			<type>1</type>
 			<location>/home/runner/UI.java</location>
