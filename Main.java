@@ -62,37 +62,36 @@ class UI {
   public static void menu() {
     /* Rutina para inicializar el menu */
     int user_select = 0; // Variable para detectar lo que el usuario seleccione
-    int user_already_init = 0; // Variable para detectar si el usuario ya CONFIG antes de JUGAR
+    int user_already_CONFIG = 0; // Variable para detectar si el usuario ya CONFIG antes de JUGAR
     String user_input_word = ""; // Variable para almacenar las palabras que el usuario ingrese
     
-    while (user_already_init == 0) {
+    while (user_already_CONFIG == 0) {
       if (user_select == 1) { 
         for (int i = 0; i < CL.palabras20.length; i++) {
           clearScreen();
-          System.out.println("----------------------------");
-          System.out.println("Ingrese 20 palabras");
-          System.out.println("(*)No mas de 12 caracteres por palabra");
-          System.out.println("----------------------------");
-          System.out.println("Palabra " + (i + 1) + " de 20");
+          System.out.println("------------------------");;
+          System.out.println("Ingrese una palabra que");
+          System.out.println("no supere 12 caracteres");
+          System.out.println("------------------------");;
+          System.out.print("Palabra " + (i + 1) + " de 20 >> ");
           CL.palabras20[i] = in.next();
-          if (CL.palabras20[i].length() > 12) {
-            i -= 1;} 
+          if (CL.palabras20[i].length() > 12) {i -= 1;} 
           clearScreen();
-        }
-        user_already_init = 1;
+         }
+        user_already_CONFIG = 1;
       } // fin INGRESO DE PALABRAS
-      System.out.println("ʕ •ᴥ•ʔ SPA DE LETRAS 3000 ʕ •ᴥ•ʔ");
-      System.out.println("------------------");
-      System.out.println("ʕ •ᴥ•ʔ ( 1 )  Configurar Juego");
-      System.out.println("ʕ •ᴥ•ʔ ( 2 )  Inicializar Juego");
-      System.out.println("* debes configurar el juego antes de comenzar");
-      System.out.println("------------------");
-      System.out.print("ʕ •ᴥ•ʔ Digite su seleccion presione ENTER: ( ");
+      System.out.println("   SPA DE LETRAS 3000   ");
+      System.out.println("------------------------");
+      System.out.println("Configurar Juego   ( 1 )");
+      System.out.println("Inicializar Juego  ( 2 )");
+      System.out.println("* No inicies sin configurar");
+      System.out.println("------------------------");
+      System.out.print("Digite su seleccion >> ");
 
       user_select = in.nextInt(); 
-      
-      if (user_select == 1 && user_already_init == 1) {// Permite al usuario reCONFIG el juego
-       user_already_init = 0;} // seteando user_already_init en 0 
+
+      if (user_select == 1 && user_already_CONFIG == 1) {
+       user_already_CONFIG = 0;} 
       clearScreen();
     
     } // fin de while
