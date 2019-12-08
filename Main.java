@@ -84,7 +84,7 @@ class UI {
       System.out.println("------------------------");
       System.out.print("Digite su seleccion >> ");
 
-      inputINT = in.nextInt(); 
+      user_Input('n');
 
       if (inputINT == 1 && user_already_CONFIG == true) {
        user_already_CONFIG = false;} 
