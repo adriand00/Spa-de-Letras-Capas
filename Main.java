@@ -16,7 +16,7 @@ class Main {
     CL.crearPalabras8();
     CL.rellenarSopa();
     UI.impSopa();
-    UI.impPalabras8();
+    UI.impLista8();
     UI.impPlayZone();
     /* Admin Tools */
     UI.impCheckTable();
@@ -104,7 +104,7 @@ class UI {
   public static void jugar() {
     do {
      impSopa();
-     impPalabras8();
+     impLista8();
      impPlayZone();
      }
      while (user_won <= 8);
@@ -130,19 +130,17 @@ class UI {
     System.out.println("=============================");
    }// fin impSopa
 
-  public static void impPalabras8() {
+  public static void impLista8() {
     System.out.println("Encuentra estas palabras:");
     int x = 0;
+    // Imprime palabras8 en 2 columnas
     for (int i = 0; i < CL.palabras8.length; i++) {
-      x = i + 1;// -----------------------------------//*********************************
-      System.out.print(x + "-) " + CL.palabras8[i] + "  ");// Imprime palabras8 en 2 columnas*
-      if (x % 2 == 0)// --------------------------------//*********************************
-      {
-        System.out.println();
-      }
-    }
-  }// fin impLista8
-
+      x = i + 1;
+      System.out.print(x + "-) " + CL.palabras8[i] + "  ");
+      if (x % 2 == 0)
+      {System.out.println();}
+     }
+   }// fin impLista8
   public static void impPlayZone() {
     System.out.println();
     String test_var = "A1-E1"; // ESTA VARIABLE NO DEBE QUEDAR EN LA VERSION FINAL

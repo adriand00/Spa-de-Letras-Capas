@@ -137,9 +137,8 @@ class Nui {
       System.out.print(x + "-) " + CL.palabras8[i] + "  ");
       if (x % 2 == 0)
       {System.out.println();}
-    }
+     }
    }// fin impLista8
-
   public static void impPlayZone() {
     System.out.println();
     System.out.println("Digita las coordenadas donde la");
