@@ -66,20 +66,20 @@ class UI {
     String user_input_word = ""; // Variable para almacenar las palabras que el usuario ingrese
     
     while (user_already_init == 0) {
-      if (user_select == 1) { // INGRESO DE PALABRAS que solamente se da si el usuario selecciona CONFIG
+      if (user_select == 1) { 
         for (int i = 0; i < CL.palabras20.length; i++) {
           clearScreen();
           System.out.println("----------------------------");
-          System.out.println("ʕ •ᴥ•ʔ Ingrese 20 palabras ʕ •ᴥ•ʔ");
-          System.out.println("ʕ •ᴥ•ʔ no mas de 12 caracteres por palabraʕ •ᴥ•ʔ");
+          System.out.println("Ingrese 20 palabras");
+          System.out.println("(*)No mas de 12 caracteres por palabra");
           System.out.println("----------------------------");
           System.out.println("Palabra " + (i + 1) + " de 20");
           CL.palabras20[i] = in.next();
           if (CL.palabras20[i].length() > 12) {
-            i -= 1;} // el conteo no continua si se inserta una palabra de mas de 12 chars
+            i -= 1;} 
           clearScreen();
         }
-        user_already_init = 1; // Declarar que el usuario ya CONFIG las 20 palabras
+        user_already_init = 1;
       } // fin INGRESO DE PALABRAS
       System.out.println("ʕ •ᴥ•ʔ SPA DE LETRAS 3000 ʕ •ᴥ•ʔ");
       System.out.println("------------------");
@@ -89,15 +89,11 @@ class UI {
       System.out.println("------------------");
       System.out.print("ʕ •ᴥ•ʔ Digite su seleccion presione ENTER: ( ");
 
-      while ( !non_error ) {      
-       try {user_select = in.nextInt(); non_error = true;} 
-       catch (Exception  ex )
-       {System.out.println("Opcion Invalida" ); String borrar_entrada = in.next();}
-       }    
+      user_select = in.nextInt(); 
       
-     if (user_select == 1 && user_already_init == 1) {// Permite al usuario reCONFIG el juego
-     user_already_init = 0;} // seteando user_already_init en 0 
-     clearScreen();
+      if (user_select == 1 && user_already_init == 1) {// Permite al usuario reCONFIG el juego
+       user_already_init = 0;} // seteando user_already_init en 0 
+      clearScreen();
     
     } // fin de while
    }// fin menu
