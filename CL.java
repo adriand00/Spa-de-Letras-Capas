@@ -2,12 +2,11 @@ class CL {
 /*         Variables Publicas        */
 //palabra actualmente siendo localizada
 public static int current_word = 0;
- //cantidad de palabras diagonales generadas
+//cantidad de palabras diagonales generadas
 public static int diag_word = 0;
 // direccion de la palaba 0-4
 public static int direccion;
-/*
-*/
+
 /*    Variables Publicas Arreglos    */
 //lista de 20 palabras del usuario
 public static String[] palabras20 = new String[20];
@@ -31,12 +30,12 @@ public static String[][] address_table = {
     {"A6", "B6", "C6", "D6", "E6", "F6", "G6", "H6", "I6", "J6", "K6", "L6"}, 
     {"A7", "B7", "C7", "D7", "E7", "F7", "G7", "H7", "I7", "J7", "K7", "L7"}, 
     {"A8", "B8", "C8", "D8", "E8", "F8", "G8", "H8", "I8", "J8", "K8", "L8"}, 
-     {"A9", "B9", "C9", "D9", "E9", "F9", "G9", "H9", "I9", "J9", "K9", "L9"}, 
+    {"A9", "B9", "C9", "D9", "E9", "F9", "G9", "H9", "I9", "J9", "K9", "L9"}, 
     {"A10","B10","C10","D10","E10","F10","G10","H10","I10","J10","K10","L10"},
     {"A11","B11","C11","D11","E11","F11","G11","H11","I11","J11","K11","L11"}, 
     {"A12","B12","C12","D12","E12","F12","G12","H12","I12","J12","K12","L12"}};
-/*
-*/
+
+
 /*              Rutinas             */
 public static void crearListaNumerosRandom() {
  int random_ind = (int) (Math.random() * 20); //establecer un valor random entre 0 y 19
