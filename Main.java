@@ -143,21 +143,18 @@ class UI {
    }// fin impLista8
   public static void impPlayZone() {
     System.out.println();
-    String test_var = "A1-E1"; // ESTA VARIABLE NO DEBE QUEDAR EN LA VERSION FINAL
-    String user_guess = " "; // lee el bateo del cliente
     System.out.println("Digita las coordenadas donde la");
     System.out.println("palabra empieza y donde termina");
-    System.out.println("(ejemplo: " + test_var + ")");
-    user_guess = in.next(); // lee el bateo del cliente
-    if (test_var.equalsIgnoreCase(user_guess)) // compara el bateo con location_table, pero esta INCOMPLETO el codigo
-    {
-      System.out.println("yes");
-    } else {
-      System.out.println("no");
-    }
-   }// fin impPlayZone
-  /* Admin Tools */
+    System.out.println("(ejemplo: A1-E1");
+    //Leer guess del usuario
+    user_Input('t');
 
+    for (int i = 0; i < CL.palabras8.length; i++)
+     if (inputSTR.equalsIgnoreCase(CL.palabras8[i]))
+     {CL.palabras8[i].toUpperCase(); user_won += 1;}
+   }// fin impPlayZone
+  //_______________________________________________________________________
+  /* Admin Tools */
   public static void error(int pf_Ecode) {
     switch (pf_Ecode) {
     case 1:
@@ -167,7 +164,7 @@ class UI {
       System.out.println("Error Desconocido");
       break;
     }
-  }// fin error
+   }// fin error
 
   public static void impCheckTable() {
     System.out.println();
@@ -177,12 +174,12 @@ class UI {
       }
       System.out.println();
     }
-  }// fin impCheckTable
+   }// fin impCheckTable
 
   public static void impLocations() {
     System.out.println();
     for (int i = 0; i < CL.locations_table.length; i++) {
       System.out.print(CL.locations_table[i] + " ");
     }
-  }// fin impLocations
+   }// fin impLocations
 } // fin CapaUI

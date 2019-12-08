@@ -143,8 +143,8 @@ class Nui {
     System.out.println();
     System.out.println("Digita las coordenadas donde la");
     System.out.println("palabra empieza y donde termina");
-    System.out.println("(ejemplo: ");
-    
+    System.out.println("(ejemplo: A1-E1");
+    //Leer guess del usuario
     user_Input('t');
    
     for (int i = 0; i < CL.palabras8.length; i++)
