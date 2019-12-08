@@ -60,13 +60,9 @@ class UI {
      } //fin char t
    }
   public static void menu() {
-    /* Rutina para inicializar el menu */
-    int user_select = 0; // Variable para detectar lo que el usuario seleccione
-    int user_already_CONFIG = 0; // Variable para detectar si el usuario ya CONFIG antes de JUGAR
-    String user_input_word = ""; // Variable para almacenar las palabras que el usuario ingrese
-    
-    while (user_already_CONFIG == 0) {
-      if (user_select == 1) { 
+    boolean user_already_CONFIG = false; // Variable para detectar si el usuario ya CONFIG antes de JUGAR    
+    while (user_already_CONFIG == false) {
+      if (inputINT == 1) { 
         for (int i = 0; i < CL.palabras20.length; i++) {
           clearScreen();
           System.out.println("------------------------");;
@@ -78,7 +74,7 @@ class UI {
           if (CL.palabras20[i].length() > 12) {i -= 1;} 
           clearScreen();
          }
-        user_already_CONFIG = 1;
+        user_already_CONFIG = true;
       } // fin INGRESO DE PALABRAS
       System.out.println("   SPA DE LETRAS 3000   ");
       System.out.println("------------------------");
@@ -88,10 +84,10 @@ class UI {
       System.out.println("------------------------");
       System.out.print("Digite su seleccion >> ");
 
-      user_select = in.nextInt(); 
+      inputINT = in.nextInt(); 
 
-      if (user_select == 1 && user_already_CONFIG == 1) {
-       user_already_CONFIG = 0;} 
+      if (inputINT == 1 && user_already_CONFIG == true) {
+       user_already_CONFIG = false;} 
       clearScreen();
     
     } // fin de while
