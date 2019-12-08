@@ -60,8 +60,10 @@ class UI {
      } //fin char t
    }
   public static void menu() {
-    boolean user_already_CONFIG = false; // Variable para detectar si el usuario ya CONFIG antes de JUGAR    
+    // Variable para detectar si el usuario ya CONFIG
+    boolean user_already_CONFIG = false;   
     while (user_already_CONFIG == false) {
+      //Submenu INGRESO DE PALABRAS
       if (inputINT == 1) { 
         for (int i = 0; i < CL.palabras20.length; i++) {
           clearScreen();
@@ -70,12 +72,17 @@ class UI {
           System.out.println("no supere 12 caracteres");
           System.out.println("------------------------");;
           System.out.print("Palabra " + (i + 1) + " de 20 >> ");
-          CL.palabras20[i] = in.next();
-          if (CL.palabras20[i].length() > 12) {i -= 1;} 
+          // Pide Palabra
+          user_Input('t');
+          // Revisa que no sea mayor de 12 chars
+          if (CL.palabras20[i].length() > 12) {i -= 1;}
+          // La guarda en minusculas 
+          CL.palabras20[i] = inputSTR.toLowerCase();
           clearScreen();
          }
         user_already_CONFIG = true;
       } // fin INGRESO DE PALABRAS
+      // Menu
       System.out.println("   SPA DE LETRAS 3000   ");
       System.out.println("------------------------");
       System.out.println("Configurar Juego   ( 1 )");
@@ -89,8 +96,7 @@ class UI {
       if (inputINT == 1 && user_already_CONFIG == true) {
        user_already_CONFIG = false;} 
       clearScreen();
-    
-    } // fin de while
+     } // fin de while
    }// fin menu
   public static void jugar() {
     do {
