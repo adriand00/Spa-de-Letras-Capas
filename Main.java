@@ -20,14 +20,18 @@ class Main {
   }//fin main
 
 class UI {
- /*Variables Globales*/
+/*Variables Globales*/
    public static Scanner in = new Scanner(System.in);
-   public static boolean non_error = false;// Var para detectar errores
-   public static int inputINT = 0;// Var para seleccion de usuario
-   public static String inputSTR = "";// Var para datos de usuario
-   public static int user_won = 0;//Var si el usuario gano
+   // Var para detectar errores
+   public static boolean non_error = false;
+   // Var para seleccion de usuario
+   public static int inputINT = 0;
+   // Var para datos de usuario
+   public static String inputSTR = "";
+   // Var si el usuario gano
+   public static int user_won = 0;
 
- /* Rutinas */
+/* Rutinas */
    public static void clearScreen() {
       /* Esta rutina limpia todo el texto de la consola */
       System.out.print("\033[H\033[2J");
@@ -119,31 +123,31 @@ class UI {
     //Imprimir un subtitulo para que el usuario ubique palabras
     System.out.println("   A B C D E F G H I J K L");
     System.out.println("=============================");
-   }// fin impSopa
+    }// fin impSopa
 
-  public static void impLista8() {
-    System.out.println("Encuentra estas palabras:");
-    int x = 0;
-    // Imprime palabras8 en 2 columnas
-    for (int i = 0; i < CL.palabras8.length; i++) {
-      x = i + 1;
-      System.out.print(x + "-) " + CL.palabras8[i] + "  ");
-      if (x % 2 == 0)
-      {System.out.println();}
-     }
-   }// fin impLista8
-  public static void impPlayZone() {
-    System.out.println();
-    System.out.println("Digita las coordenadas donde la");
-    System.out.println("palabra empieza y donde termina.");
-    System.out.print("Ejemplo: A1-E12 >> ");
-    //Leer guess del usuario
-    user_Input('t');
-    String qqq = "";
-    // Ver si el guess de usuario esta en locations_table
-    for (int i = 0; i < CL.palabras8.length; i++)
-     if (inputSTR.equalsIgnoreCase(CL.locations_table[i]))
-     {CL.palabras8[i] = CL.palabras8[i].toUpperCase(); user_won += 1;}
+   public static void impLista8() {
+     System.out.println("Encuentra estas palabras:");
+     CL.tempINT = 0;
+     // Imprime palabras8 en 2 columnas
+     for (int i = 0; i < CL.palabras8.length; i++) {
+       CL.tempINT = i + 1;
+       System.out.print(CL.tempINT + "-) " + CL.palabras8[i] + "  ");
+       if (CL.tempINT % 2 == 0)
+       {System.out.println();}
+       }
+     CL.tempINT = 0;
+     }// fin impLista8
+   public static void impPlayZone() {
+     System.out.println();
+     System.out.println("Digita las coordenadas donde la");
+     System.out.println("palabra empieza y donde termina.");
+     System.out.print("Ejemplo: A1-E12 >> ");
+     //Leer guess del usuario
+     user_Input('t');
+     // Ver si el guess de usuario esta en locations_table
+     for (int i = 0; i < CL.palabras8.length; i++)
+       if (inputSTR.equalsIgnoreCase(CL.locations_table[i]))
+       {CL.palabras8[i] = CL.palabras8[i].toUpperCase(); user_won += 1;}
    }// fin impPlayZone
 /* Admin Tools */
   public static void error(int pf_Ecode) {

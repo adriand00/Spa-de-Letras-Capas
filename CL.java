@@ -1,27 +1,31 @@
 class CL {
 /*         Variables Publicas        */
-//palabra actualmente siendo localizada
-public static int current_word = 0;
-//cantidad de palabras diagonales generadas
-public static int diag_word = 0;
-// direccion de la palaba 0-4
-public static int direccion;
+ //palabra actualmente siendo localizada
+ public static int current_word = 0;
+ //cantidad de palabras diagonales generadas
+ public static int diag_word = 0;
+ // direccion de la palaba 0-4
+ public static int direccion;
+ // Var para enteros temporales
+ public static int tempINT = 0;
+ // Var para strings temporales 
+ public static String tempSTR = " ";
 
 /*    Variables Publicas Arreglos    */
-//lista de 20 palabras del usuario
-public static String[] palabras20 = new String[20];
-//lista con 8 numeros random
-public static int[] listarandom8 = new int[9];
-//lista con 8 palabras random      
-public static String[] palabras8 = new String[8];
-//tabla de spa    
-public static String[][] spa = new String[12][12]; 
-//tabla de campos vacios(0) o llenos (1) 
-public static int[][] check = new int[12][12]; 
-//tabla de respuestas
-public static String[] locations_table = new String[8];
-// tabla de direcciones
-public static String[][] address_table = { 
+ //lista de 20 palabras del usuario
+ public static String[] palabras20 = new String[20];
+ //lista con 8 numeros random
+ public static int[] listarandom8 = new int[9];
+ //lista con 8 palabras random      
+ public static String[] palabras8 = new String[8];
+ //tabla de spa    
+ public static String[][] spa = new String[12][12]; 
+ //tabla de campos vacios(0) o llenos (1) 
+ public static int[][] check = new int[12][12]; 
+ //tabla de respuestas
+ public static String[] locations_table = new String[8];
+ // tabla de direcciones
+ public static String[][] address_table = { 
     {"A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1", "I1", "J1", "K1", "L1"}, 
     {"A2", "B2", "C2", "D2", "E2", "F2", "G2", "H2", "I2", "J2", "K2", "L2"}, 
     {"A3", "B3", "C3", "D3", "E3", "F3", "G3", "H3", "I3", "J3", "K3", "L3"}, 
@@ -30,38 +34,45 @@ public static String[][] address_table = {
     {"A6", "B6", "C6", "D6", "E6", "F6", "G6", "H6", "I6", "J6", "K6", "L6"}, 
     {"A7", "B7", "C7", "D7", "E7", "F7", "G7", "H7", "I7", "J7", "K7", "L7"}, 
     {"A8", "B8", "C8", "D8", "E8", "F8", "G8", "H8", "I8", "J8", "K8", "L8"}, 
-    {"A9", "B9", "C9", "D9", "E9", "F9", "G9", "H9", "I9", "J9", "K9", "L9"}, 
+     {"A9", "B9", "C9", "D9", "E9", "F9", "G9", "H9", "I9", "J9", "K9", "L9"}, 
     {"A10","B10","C10","D10","E10","F10","G10","H10","I10","J10","K10","L10"},
     {"A11","B11","C11","D11","E11","F11","G11","H11","I11","J11","K11","L11"}, 
     {"A12","B12","C12","D12","E12","F12","G12","H12","I12","J12","K12","L12"}};
 
-
 /*              Rutinas             */
-public static void crearListaNumerosRandom() {
- int random_ind = (int) (Math.random() * 20); //establecer un valor random entre 0 y 19
- boolean random_done = false; // bandera para salir de loop cuando sea true
+ public static void crearListaNumerosRandom() {
+   //establecer un valor random entre 0 y 20
+   tempINT = (int) (Math.random() * 20); 
+   // bandera para salir de loop cuando sea true
+   boolean random_done = false; 
 
- for (int i = 0; i < listarandom8.length; i++) { //loop para editar cada indx de listarandom8
-   random_ind = (int) (Math.random() * 20); //regenerar numero aleatorio
-   do { // loop para chequear que el numero que se genere no sea repetido a uno que ya esta en listarandom8
-     for (int j = 0; j < listarandom8.length; j++) { //segundo loop para repasar listarandom8
-     if (listarandom8[j] == random_ind) //checa si el indx es igual al random_ind
-     {random_ind=(int)(Math.random()*20); j = 0; // vuelve a regenerar el numero y reiniciar el loop
-     } else {
-     random_done = true;}} // cambia la bandera  
-     } while (random_done = false); // sale del loop x2
-   listarandom8[i] = random_ind; //setea el valor random dentro de la lista, utilizando el contador del primer loop
-   }   
- } //fin crear8NumerosRandom
-public static void crearPalabras8() {
- int x = 0; // variable temporal que almacena enteros
- String y = " "; //variable temporal que almacena strings
- for (int i = 0 ; i < palabras8.length; i++) { //loop para navegar por palabras8
-   x = listarandom8[i + 1]; // x igual al valor almacenado en listarandom8 (saltandose index 0)
-   y = palabras20[x]; // y igual al string almacenado en palabras20, acorde a index X
-   palabras8[i] = y; // se almacena la palabra "y", tomada aleatoriamente de palabras20
-   } 
- }//fin crearPalabras8
+   //loop para editar cada indx de listarandom8
+   for (int i = 0; i < listarandom8.length; i++) { 
+     //regenerar numero aleatorio
+     tempINT = (int) (Math.random() * 20); 
+     do { // loop para chequear que el numero no sea repetido
+       for (int j = 0; j < listarandom8.length; j++) { 
+       // Si el indx es igual al random_ind, vuelve a randomizar el numero 
+       if (listarandom8[j] == tempINT)
+       {tempINT=(int)(Math.random()*20); j = 0; 
+       } else {
+       // Activa bandera y sale del loop
+       random_done = true;}}   
+       } while (random_done = false); // sale del loop x2
+     //Almacenar el numero, luego de verificar que no se repita
+     listarandom8[i] = tempINT;
+     }// fin for loop     
+   }// fin crear8NumerosRandom
+ public static void crearPalabras8() {
+   for (int i = 0 ; i < palabras8.length; i++) {
+     // tempINT igual al valor almacenado en listarandom8 (saltandose index 0)
+     tempINT = listarandom8[i + 1]; 
+     // tempSTR igual al string almacenado en palabras20, acorde a index tempINT
+     tempSTR = palabras20[tempINT]; 
+     // se almacena la palabra "tempSTR", tomada aleatoriamente de palabras20
+     palabras8[i] = tempSTR; 
+     } 
+  }//fin crearPalabras8
 public static void rellenarSopa() {
  //String letras = "abcdefghijklmnñopqrstuvwxyz";
  String letras = "---------------------------"; //ADMIN TOOL
