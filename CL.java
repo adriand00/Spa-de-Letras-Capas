@@ -82,70 +82,68 @@ public static void rellenarSopa() {
      spa[i][j] =  Character.toString(letras.charAt(M));} //posiciona una letra de "letras" en la sopa
    }
  for (int i = 0; i < palabras8.length; i++) {
- String sss = palabras8[i];
- ubicar_palabra(sss);
+ ubicar_palabra(palabras8[i]);
  palabras8[i] += " "+direccion+" "; // ADMIN TOOL
  }
  }//fin rellenarSopa
-public static void ubicar_palabra(String pf_palabra) { 
- int Xstart; int Ystart; 
- int Xlimit; int Ylimit;
- int Xweight = 0; int Yweight = 0;
- int largo = pf_palabra.length();
-  
- if (largo >= 7 || diag_word <=2) //Solo palabras mas pequeñas que 7 van a ser diagonizables
+ public static void ubicar_palabra(String pf_palabra) { 
+   int Xstart; int Ystart; 
+   int Xlimit; int Ylimit;
+   int Xweight = 0; int Yweight = 0;
+   int largo = pf_palabra.length();
+
+   //Solo palabras mas pequeñas que 7 van a ser diagonizables
+   if (largo >= 7 || diag_word <=2) 
    {direccion = (int)(Math.random()*3);}
    else
    {direccion = (int)(Math.random()*4); diag_word += 1;} 
  
- switch (direccion) {
-   case 0: // (0)izq-der 
-     Xweight = 1;
-     Yweight = 0;
-     break;
-   case 1: // (1)der-izq 
-     Xweight = -1;
-     Yweight = 0;
-     break;
-   case 2: // (2)arr-abj 
-     Xweight = 0;
-     Yweight = 1;
-     break;
-   case 3: // (3)abj-arr 
-     Xweight = 0;
-     Yweight = -1;
-     break;
-   case 4: // (4)diagonal SurEste
-     Xweight = 1;
-     Yweight = 1;
-     break;
-   default:
-     UI.error(1);
-     break;
-   }
- /* Setear limites de borde, en base a la direccion en que sera escrita la palabra */
- Xlimit = (Xweight >= 0) ? 11 - (largo * Xweight) : largo;
- Ylimit = (Yweight >= 0) ? 11 - (largo * Yweight) : largo;
+   switch (direccion) {
+     case 0: // (0)izq-der 
+       Xweight = 1;
+       Yweight = 0;
+       break;
+     case 1: // (1)der-izq 
+       Xweight = -1;
+       Yweight = 0;
+       break;
+     case 2: // (2)arr-abj 
+       Xweight = 0;
+       Yweight = 1;
+       break;
+     case 3: // (3)abj-arr 
+       Xweight = 0;
+       Yweight = -1;
+       break;
+     case 4: // (4)diagonal SurEste
+       Xweight = 1;
+       Yweight = 1;
+       break;
+     }// fin switch
+   /* Setear limites de borde, en base a la direccion en que sera escrita la palabra */
+   Xlimit = (Xweight >= 0) ? 11 - (largo * Xweight) : largo;
+   Ylimit = (Yweight >= 0) ? 11 - (largo * Yweight) : largo;
 
- /* Seteat punto inicial de palabra, teniendo en consideracion los limites Y direccion */
- Xstart = (Xweight >= 0) ? (int)(Math.random()*Xlimit) : (int)(Math.random()*(10-largo)) + (Xlimit);
- Ystart = (Yweight >= 0) ? (int)(Math.random()*Ylimit) : (int)(Math.random()*(10-largo)) + (Ylimit);
+   /* Seteat punto inicial de palabra, teniendo en consideracion los limites Y direccion */
+   Xstart = (Xweight >= 0) ? (int)(Math.random()*Xlimit) : (int)(Math.random()*(10-largo)) + (Xlimit);
+   Ystart = (Yweight >= 0) ? (int)(Math.random()*Ylimit) : (int)(Math.random()*(10-largo)) + (Ylimit);
 
- /* Chequear donde hay espacio disponible para localizar la palabra */
- int SumaDeEspacios = 0; //variable para llevar conteo
- int Repetir = 1; //bandera para romper ciclo
- while (Repetir == 1) {
-   for (int i = 0; i < largo; i++) 
-    {SumaDeEspacios += (Xweight >= 0) ? check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] : check[Ystart - (i * Yweight)][Xstart - (i * Xweight)] ;}
-   if (SumaDeEspacios > 0) { //Si la suma de espacios es mayor a 0 = espacions ocupados, es necesario re-posioncion
-      Xstart = (Xweight >= 0) ? (int)(Math.random()*Xlimit) : (int)(Math.random()*(10-largo)) + (Xlimit);
-      Ystart = (Yweight >= 0) ? (int)(Math.random()*Ylimit) : (int)(Math.random()*(10-largo)) + (Ylimit); 
-     SumaDeEspacios = 0;
+   /* Chequear donde hay espacio disponible para localizar la palabra */
+   tempINT = 0; //variable para llevar conteo
+   boolean repetir = true; //bandera para romper ciclo
+   while (repetir = true) {
+     for (int i = 0; i < largo; i++) 
+      {tempINT += (Xweight >= 0) ? check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] : check[Ystart - (i * Yweight)][Xstart - (i * Xweight)] ;}
+   //Si la suma de espacios es mayor a 0 = espacions ocupados, es necesario re-posioncion
+     if (tempINT > 0) { 
+        Xstart = (Xweight >= 0) ? (int)(Math.random()*Xlimit) : (int)(Math.random()*(10-largo)) + (Xlimit);
+        Ystart = (Yweight >= 0) ? (int)(Math.random()*Ylimit) : (int)(Math.random()*(10-largo)) + (Ylimit); 
+       tempINT = 0;
      }else{
-     Repetir = 0;}
+     repetir = false;}
    }
- /*Una vez encotrados los campos*/
- for (int i = 0; i < largo; i++) {
+   /*Una vez encotrados los campos*/
+   for (int i = 0; i < largo; i++) {
    check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = 1;//Rellenar check_table con los nuevos espacios ocupados
    spa[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = Character.toString(pf_palabra.charAt(i));//Rellenar spa
    if (i == 0) // Guardar la posicion inicial de la palabra

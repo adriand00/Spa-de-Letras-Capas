@@ -16,6 +16,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>src/CL.java</name>
+			<type>1</type>
+			<location>//home/runner/CL.java</location>
+		</link>
+		<link>
 			<name>src/Main.java</name>
 			<type>1</type>
 			<location>//home/runner/Main.java</location>

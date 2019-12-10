@@ -32,12 +32,12 @@ class UI {
    public static int user_won = 0;
 
 /* Rutinas */
-   public static void clearScreen() {
+ public static void clearScreen() {
       /* Esta rutina limpia todo el texto de la consola */
       System.out.print("\033[H\033[2J");
       System.out.flush();
       }// fin clear screen
-   public static void user_Input(char pf_type){
+ public static void user_Input(char pf_type){
       if (pf_type == 'n') {
        while ( !non_error ) {      
          try {inputINT = in.nextInt(); non_error = true;} 
@@ -46,8 +46,7 @@ class UI {
          String borrar_entrada = in.next();}
          }    
        non_error = false;
-     } //fin char n
-      if (pf_type == 't') {
+       } else {
        while ( !non_error ) {      
          try {inputSTR = in.next(); non_error = true;} 
          catch (Exception  ex )
@@ -57,7 +56,7 @@ class UI {
        non_error = false;
      } // fin char t
     }// Fin user_Input
-   public static void menu() {
+ public static void menu() {
      // Variable para detectar si el usuario ya CONFIG
      boolean user_already_CONFIG = false;  
      //Menu 
@@ -97,14 +96,14 @@ class UI {
        clearScreen();
        } // fin de while
      }// fin menu()
-   public static void jugar() {
+ public static void jugar() {
      do {
       impSopa();
       impLista8();
       impPlayZone(); }
       while (user_won <= 8);
      }//fin jugar
-   public static void impSopa() {
+ public static void impSopa() {
     clearScreen();
     // Imprimir una titulo para que el usuario ubique palabras
     System.out.print("   A B C D E F G H I J K L"); 
@@ -125,7 +124,7 @@ class UI {
     System.out.println("=============================");
     }// fin impSopa
 
-   public static void impLista8() {
+ public static void impLista8() {
      System.out.println("Encuentra estas palabras:");
      CL.tempINT = 0;
      // Imprime palabras8 en 2 columnas
@@ -137,7 +136,7 @@ class UI {
        }
      CL.tempINT = 0;
      }// fin impLista8
-   public static void impPlayZone() {
+ public static void impPlayZone() {
      System.out.println();
      System.out.println("Digita las coordenadas donde la");
      System.out.println("palabra empieza y donde termina.");
