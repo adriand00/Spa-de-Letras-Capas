@@ -10,6 +10,14 @@ class CL {
  public static int tempINT = 0;
  // Var para strings temporales 
  public static String tempSTR = " ";
+ // Var relativas a X
+ public static int Xstart = 0;
+ public static int Xweight = 0;
+ public static int Xlimit = 0;
+ // Var relativas a Y
+ public static int Ystart = 0;
+ public static int Yweight = 0;
+ public static int Ylimit = 0;
 
 /*    Variables Publicas Arreglos    */
  //lista de 20 palabras del usuario
@@ -99,9 +107,6 @@ class CL {
    }
    }//fin rellenarSopa
  public static void ubicar_palabra(String pf_palabra) { 
-   int Xweight = 0; int Yweight = 0;
-   int Xlimit; int Ylimit;
-   int Xstart; int Ystart; 
    int largo = pf_palabra.length();
   
    // Solo palabras mas pequeñas que 7 van a ser diagonizables
