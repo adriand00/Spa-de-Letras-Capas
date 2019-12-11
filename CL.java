@@ -182,15 +182,15 @@ class CL {
      int iYweight = i * Math.abs(Yweight);
      if (Xweight < 0 || Yweight < 0) { 
        // Rellenar check con los nuevos espacios ocupados
-       check[Ystart + iYweight][Xstart + iXweight] = current_word;
+       check[Ystart - iYweight][Xstart - iXweight] = current_word;
        // Rellenar sopa con las letras de la palabra
-       spa[Ystart + iYweight][Xstart + iXweight] = Character.toString(pf_palabra.charAt(i));
+       spa[Ystart - iYweight][Xstart - iXweight] = Character.toString(pf_palabra.charAt(i));
        // Guardar la posicion inicial de la palabra
        if (i == 0) 
        {locations_table[current_word - 1] = address_table[Ystart][Xstart];}
        // Guardar la posicion final de la palabra 
        if (i == (largo-1)) 
-       {locations_table[current_word - 1] +="-" + address_table[Ystart + iYweight][Xstart + iXweight];}
+       {locations_table[current_word - 1] +="-" + address_table[Ystart - iYweight][Xstart - iXweight];}
      } else {
        // Rellenar check con los nuevos espacios ocupados
        check[Ystart + iYweight][Xstart + iXweight] = current_word;
