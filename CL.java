@@ -1,7 +1,7 @@
 class CL {
 /*         Variables Publicas        */
  //palabra actualmente siendo localizada
- public static int current_word = 0;
+ public static int current_word = 1;
  //cantidad de palabras diagonales generadas
  public static int diag_word = 0;
  // direccion de la palaba 0-4
@@ -156,29 +156,23 @@ class CL {
  if (Yweight == 1) {Ystart = (int)(Math.random()*Ylimit);}
  if (Yweight == -1) {Ystart = Ylimit + (Math.random()*(11-largo));}
  
- 
-
-
-
-
-
  /* Chequear donde hay espacio disponible para localizar la palabra */
- int SumaDeEspacios = 0; //variable para llevar conteo
+ tempINT = 0; //variable para llevar conteo
  int Repetir = 1; //bandera para romper ciclo
  while (Repetir == 1) {
    for (int i = 0; i < largo; i++) 
-    {SumaDeEspacios += (Xweight >= 0) ? check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] : check[Ystart - (i * Yweight)][Xstart - (i * Xweight)] ;}
-   if (SumaDeEspacios > 0) { //Si la suma de espacios es mayor a 0 = espacions ocupados, es necesario re-posioncion
+    {tempINT += (Xweight >= 0) ? check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] : check[Ystart - (i * Yweight)][Xstart - (i * Xweight)] ;}
+   if (tempINT > 0) { //Si la suma de espacios es mayor a 0 = espacions ocupados, es necesario re-posioncion
       Xstart = (Xweight >= 0) ? (int)(Math.random()*Xlimit) : (int)(Math.random()*(10-largo)) + (Xlimit);
       Ystart = (Yweight >= 0) ? (int)(Math.random()*Ylimit) : (int)(Math.random()*(10-largo)) + (Ylimit); 
-     SumaDeEspacios = 0;
+     tempINT = 0;
      }else{
      Repetir = 0;}
    }
  /*Una vez encotrados los campos*/
  for (int i = 0; i < largo; i++) {
    //que no hayan unos()!!!!!!!!
-   check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = 1;//Rellenar check_table con los nuevos espacios ocupados
+   check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = current_word;//Rellenar check_table con los nuevos espacios ocupados
    spa[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = Character.toString(pf_palabra.charAt(i));//Rellenar spa
    if (i == 0) // Guardar la posicion inicial de la palabra
      {locations_table[current_word] = address_table[Ystart][Xstart];}
@@ -189,4 +183,15 @@ class CL {
    current_word += 1 ;
 
  } //fin ubicar_palabra
-}//fin CapaLogica
+ public static void generarCordenadas() {
+   // Calculo de Xstart
+   if (Xweight == 0) {Xstart = (int)(Math.random()*11);}
+   if (Xweight == 1) {Xstart = (int)(Math.random()*Xlimit);}
+   if (Xweight == -1) {Xstart = Xlimit + (Math.random()*(11-largo));}
+
+   // Calculo de Ystart
+   if (Yweight == 0) {Ystart = (int)(Math.random()*11);}
+   if (Yweight == 1) {Ystart = (int)(Math.random()*Ylimit);}
+   if (Yweight == -1) {Ystart = Ylimit + (Math.random()*(11-largo));}
+ } // fin generarCoordenadas()
+}// fin CapaLogica

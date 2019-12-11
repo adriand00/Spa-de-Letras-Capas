@@ -101,7 +101,7 @@ class UI {
       impSopa();
       impLista8();
       impPlayZone(); }
-      while (user_won <= 8);
+      while (user_won != 8);
      }//fin jugar
  public static void impSopa() {
     clearScreen();
