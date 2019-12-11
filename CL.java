@@ -80,20 +80,20 @@ class CL {
      palabras8[i] = tempSTR; 
      } 
   }//fin crearPalabras8
-public static void rellenarSopa() {
- //String letras = "abcdefghijklmnñopqrstuvwxyz";
- String letras = "---------------------------"; //ADMIN TOOL
- for (int i = 0; i < spa.length; i++) {//-----*navegar por  *
-   for (int j = 0; j < spa.length; j++) {//---*toda la tabla*
+ public static void rellenarSopa() {
+   //String letras = "abcdefghijklmnñopqrstuvwxyz";
+   String letras = "---------------------------"; //ADMIN TOOL
+   for (int i = 0; i < spa.length; i++) {//-----*navegar por  *
+     for (int j = 0; j < spa.length; j++) {//---*toda la tabla*
      int M = (int)(Math.random()*27); //variable temporal para almacenar un entero random
      spa[i][j] =  Character.toString(letras.charAt(M));} //posiciona una letra de "letras" en la sopa
+     }
+   for (int i = 0; i < palabras8.length; i++) {
+   ubicar_palabra(palabras8[i]);
+   palabras8[i] += " "+direccion+" "; // ADMIN TOOL
    }
- for (int i = 0; i < palabras8.length; i++) {
- ubicar_palabra(palabras8[i]);
- palabras8[i] += " "+direccion+" "; // ADMIN TOOL
- }
- }//fin rellenarSopa
-public static void ubicar_palabra(String pf_palabra) { 
+   }//fin rellenarSopa
+ public static void ubicar_palabra(String pf_palabra) { 
  int Xstart; int Ystart; 
  int Xlimit; int Ylimit;
  int Xweight = 0; int Yweight = 0;
@@ -148,13 +148,13 @@ public static void ubicar_palabra(String pf_palabra) {
  
  // Calculo de Xstart
  if (Xweight == 0) {Xstart = (int)(Math.random()*11);}
- if (Xweight == 1) {Xstart = ((int)(Math.random()*Xlimit)}
- if (Xweight == -1) {}
+ if (Xweight == 1) {Xstart = (int)(Math.random()*Xlimit);}
+ if (Xweight == -1) {Xstart = Xlimit + (Math.random()*(11-largo));}
 
  // Calculo de Ystart
  if (Yweight == 0) {Ystart = (int)(Math.random()*11);}
- if (Yweight == 1) {}
- if (Yweight == -1) {}
+ if (Yweight == 1) {Ystart = (int)(Math.random()*Ylimit);}
+ if (Yweight == -1) {Ystart = Ylimit + (Math.random()*(11-largo));}
  
  
 
