@@ -21,7 +21,14 @@ class CL {
  //tabla de spa    
  public static String[][] spa = new String[12][12]; 
  //tabla de campos vacios(0) o llenos (1) 
- public static int[][] check = new int[12][12]; 
+ public static void crearCheck() {
+   int[][] check = new int[12][12];
+   for(int i = 0; i < check.length; i++) {
+     for(int j = 0; j < check.length; j++)
+     { check[i][j] = 0; }
+     } 
+   } // fin :D crearCheck
+ 
  //tabla de respuestas
  public static String[] locations_table = new String[8];
  // tabla de direcciones
@@ -82,8 +89,7 @@ public static void rellenarSopa() {
      spa[i][j] =  Character.toString(letras.charAt(M));} //posiciona una letra de "letras" en la sopa
    }
  for (int i = 0; i < palabras8.length; i++) {
- String sss = palabras8[i];
- ubicar_palabra(sss);
+ ubicar_palabra(palabras8[i]);
  palabras8[i] += " "+direccion+" "; // ADMIN TOOL
  }
  }//fin rellenarSopa
@@ -142,7 +148,7 @@ public static void ubicar_palabra(String pf_palabra) {
  
  // Calculo de Xstart
  if (Xweight == 0) {Xstart = (int)(Math.random()*11);}
- if (Xweight == 1) {Xstart = ((int)(Math.random()*Ylimit)}
+ if (Xweight == 1) {Xstart = ((int)(Math.random()*Xlimit)}
  if (Xweight == -1) {}
 
  // Calculo de Ystart
