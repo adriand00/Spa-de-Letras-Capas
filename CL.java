@@ -20,17 +20,22 @@ class CL {
  public static String[] palabras8 = new String[8];
  //tabla de spa    
  public static String[][] spa = new String[12][12]; 
- //tabla de campos vacios(0) o llenos (1) 
- public static void crearCheck() {
-   int[][] check = new int[12][12];
-   for(int i = 0; i < check.length; i++) {
-     for(int j = 0; j < check.length; j++)
-     { check[i][j] = 0; }
-     } 
-   } // fin :D crearCheck
- 
  //tabla de respuestas
  public static String[] locations_table = new String[8];
+ //tabla de campos vacios(0) o llenos (1) 
+ public static int[][] check = { 
+    {0,0,0,0,0,0,0,0,0,0,0,0}, 
+    {0,0,0,0,0,0,0,0,0,0,0,0}, 
+    {0,0,0,0,0,0,0,0,0,0,0,0}, 
+    {0,0,0,0,0,0,0,0,0,0,0,0}, 
+    {0,0,0,0,0,0,0,0,0,0,0,0}, 
+    {0,0,0,0,0,0,0,0,0,0,0,0}, 
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0}}; 
  // tabla de direcciones
  public static String[][] address_table = { 
     {"A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1", "I1", "J1", "K1", "L1"}, 
@@ -128,11 +133,7 @@ class CL {
      Yweight = 1;
      break;
    }
-   /* Setear limites de borde, en base a la direccion en que sera escrita la palabra */
-   Xlimit = (Xweight >= 0) ? 11 - (largo * Xweight) : largo; //1 > 6
-   Ylimit = (Yweight >= 0) ? 11 - (largo * Yweight) : largo; //0 > 11
-
-   // Seteat punto inicial de palabra, teniendo en consideracion largo de palabra Y direccion
+   // Calculo de limites, en base a la direccion en que sera escrita la palabra 
    // Calculo de Xlimit
    if (Xweight == 0) {Xlimit = (int)(Math.random()*11);}
    if (Xweight == 1) {Xlimit = (int)(Math.random()*(11-largo)) + 1;}  
@@ -143,46 +144,58 @@ class CL {
    if (Yweight == 1) {Ylimit = (int)(Math.random()*(12-largo))+1;}
    if (Yweight == -1) {Ylimit = largo-1;} 
  
-   // Calculo de Xstart y Ystart
+   // Calculo de comienzo de palabra, en un rango dentro del limite
    generarCordenadas();
  
-   // Chequear donde hay espacio disponible para localizar la palabra
-   //var para llevar conteo
-   tempINT = 0; 
-   //bandera para romper ciclo
-   int Repetir = 1;
-
-   while (Repetir == 1) {
-     for (int i = 0; i < largo; i++) { 
-       tempINT += ( (Math.abs(Xweight)*Yweight) >= 0 ) ? 
-       check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] 
-       : 
-       check[Ystart - (i * Yweight)][Xstart - (i * Xweight)] ;}
-   // Si la suma de espacios es mayor a 0 = espacions ocupados, es necesario regenerar coordenadas
+   // Chequear donde haya espacio disponible para localizar la palabra
+   tempINT = 0;      //var para llevar suma acarreada de espacios
+   int Repetir = 1;  // bandera para romper ciclo
+   while (Repetir == 1) { // Checar por adelantado los espacios que ocupara la palabra, y ver si estan vacios
+     for (int i = 0; i < largo; i++) {
+      int iXweight = i * Math.abs(Xweight);
+      int iYweight = i * Math.abs(Yweight); 
+      // Ver en que direccion debe hacer la suma
+      if (Xweight < 0 || Yweight < 0) {  
+      tempINT += check[Ystart - iYweight][Xstart - iXweight]; 
+      }else{
+      tempINT += check[Ystart + iYweight][Xstart + Xweight] ;} }
+     // Si tempINT > 0 = espacions ocupados, es necesario regenerar coordenadas
      if (tempINT > 0) { 
        generarCordenadas(); tempINT = 0;
-       }else{ 
-       // Si no, pos romper el ciclo
-       Repetir = 0;}
+       } else {
+       Repetir = 0;} // Si no, pos romper el ciclo
      } // fin while
 
- //Una vez encotrados los campos
- for (int i = 0; i < largo; i++) {
-   // Rellenar check con los nuevos espacios ocupados
-   check[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = current_word;
-   // Rellenar sopa con las letras de la palabra
-   spa[Ystart + (i * Yweight)][Xstart + (i * Xweight)] = Character.toString(pf_palabra.charAt(i));
-   // Guardar la posicion inicial de la palabra
-   if (i == 0) 
-     {locations_table[current_word] = address_table[Ystart][Xstart];}
-   // Guardar la posicion final de la palabra 
-   if (i == (largo-1)) 
-     {locations_table[current_word] +="-" + address_table[Ystart + (i * Yweight)][Xstart + (i * Xweight)];}
-   }
-
+   //Una vez encotrados los campos, rellenarlos
+   for (int i = 0; i < largo; i++) {
+     int iXweight = i * Math.abs(Xweight);
+     int iYweight = i * Math.abs(Yweight);
+     if (Xweight < 0 || Yweight < 0) { 
+       // Rellenar check con los nuevos espacios ocupados
+       check[Ystart + iYweight][Xstart + iXweight] = current_word;
+       // Rellenar sopa con las letras de la palabra
+       spa[Ystart + iYweight][Xstart + iXweight] = Character.toString(pf_palabra.charAt(i));
+       // Guardar la posicion inicial de la palabra
+       if (i == 0) 
+       {locations_table[current_word] = address_table[Ystart][Xstart];}
+       // Guardar la posicion final de la palabra 
+       if (i == (largo-1)) 
+       {locations_table[current_word - 1] +="-" + address_table[Ystart + iYweight][Xstart + iXweight];}
+     } else {
+       // Rellenar check con los nuevos espacios ocupados
+       check[Ystart + iYweight][Xstart + iXweight] = current_word;
+       // Rellenar sopa con las letras de la palabra
+       spa[Ystart + iYweight][Xstart + iXweight] = Character.toString(pf_palabra.charAt(i));
+       // Guardar la posicion inicial de la palabra
+       if (i == 0) 
+       {locations_table[current_word] = address_table[Ystart][Xstart];}
+       // Guardar la posicion final de la palabra 
+       if (i == (largo-1)) 
+       {locations_table[current_word - 1] +="-" + address_table[Ystart + iYweight][Xstart + iXweight];}
+     } } // Fin loop
+     // Sumar que una palabra ya fue completada
    current_word += 1 ;
-
- } //fin ubicar_palabra
+   } //fin ubicar_palabra
  public static void generarCordenadas() {
    // Calculo de Xstart
    if (Xweight == 0) {Xstart = (int)(Math.random()*11);}
@@ -193,5 +206,5 @@ class CL {
    if (Yweight == 0) {Ystart = (int)(Math.random()*11);}
    if (Yweight == 1) {Ystart = (int)(Math.random()*Ylimit);}
    if (Yweight == -1) {Ystart = Ylimit + (Math.random()*(11-largo));}
- } // fin generarCoordenadas()
+   } // fin generarCoordenadas()
 }// fin CapaLogica
