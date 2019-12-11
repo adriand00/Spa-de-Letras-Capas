@@ -114,7 +114,7 @@ class CL {
    if (largo >= 7 || diag_word >= 2)
      {direccion = (int)(Math.random()*3);}
      else
-     {direccion = (int)(Math.random()*4); diag_word += 1;} 
+     {direccion = (int)(Math.random()*4) + 1; diag_word += 1;} 
  
    // Definir pesos deacuerdo a var direccion
    switch (direccion) {
@@ -135,6 +135,10 @@ class CL {
      Yweight = -1;
      break;
    case 4: // (4)diagonal SurEste
+     Xweight = 1;
+     Yweight = 1;
+     break;
+   case 5: // (4)diagonal SurEste
      Xweight = 1;
      Yweight = 1;
      break;
@@ -183,7 +187,7 @@ class CL {
        spa[Ystart + iYweight][Xstart + iXweight] = Character.toString(pf_palabra.charAt(i));
        // Guardar la posicion inicial de la palabra
        if (i == 0) 
-       {locations_table[current_word] = address_table[Ystart][Xstart];}
+       {locations_table[current_word - 1] = address_table[Ystart][Xstart];}
        // Guardar la posicion final de la palabra 
        if (i == (largo-1)) 
        {locations_table[current_word - 1] +="-" + address_table[Ystart + iYweight][Xstart + iXweight];}

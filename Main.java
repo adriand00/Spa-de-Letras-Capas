@@ -100,6 +100,7 @@ class UI {
      do {
       impSopa();
       impLista8();
+      impCheckTable();
       impPlayZone(); }
       while (user_won != 8);
      }//fin jugar
