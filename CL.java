@@ -18,7 +18,8 @@ class CL {
  public static int Ystart = 0;
  public static int Yweight = 0;
  public static int Ylimit = 0;
-
+ // Var largo de palabra
+ public static int largo = 0;
 /*    Variables Publicas Arreglos    */
  //lista de 20 palabras del usuario
  public static String[] palabras20 = new String[20];
@@ -107,7 +108,7 @@ class CL {
    }
    }//fin rellenarSopa
  public static void ubicar_palabra(String pf_palabra) { 
-   int largo = pf_palabra.length();
+   largo = pf_palabra.length();
   
    // Solo palabras mas pequeñas que 7 van a ser diagonizables
    if (largo >= 7 || diag_word >= 2)
@@ -193,7 +194,7 @@ class CL {
        spa[Ystart + iYweight][Xstart + iXweight] = Character.toString(pf_palabra.charAt(i));
        // Guardar la posicion inicial de la palabra
        if (i == 0) 
-       {locations_table[current_word] = address_table[Ystart][Xstart];}
+       {locations_table[current_word - 1] = address_table[Ystart][Xstart];}
        // Guardar la posicion final de la palabra 
        if (i == (largo-1)) 
        {locations_table[current_word - 1] +="-" + address_table[Ystart + iYweight][Xstart + iXweight];}
@@ -205,11 +206,11 @@ class CL {
    // Calculo de Xstart
    if (Xweight == 0) {Xstart = (int)(Math.random()*11);}
    if (Xweight == 1) {Xstart = (int)(Math.random()*Xlimit);}
-   if (Xweight == -1) {Xstart = Xlimit + (Math.random()*(11-largo));}
+   if (Xweight == -1) {Xstart = Xlimit + (int)(Math.random()*(11-largo));}
 
    // Calculo de Ystart
    if (Yweight == 0) {Ystart = (int)(Math.random()*11);}
    if (Yweight == 1) {Ystart = (int)(Math.random()*Ylimit);}
-   if (Yweight == -1) {Ystart = Ylimit + (Math.random()*(11-largo));}
+   if (Yweight == -1) {Ystart = Ylimit + (int)(Math.random()*(11-largo));}
    } // fin generarCoordenadas()
 }// fin CapaLogica
