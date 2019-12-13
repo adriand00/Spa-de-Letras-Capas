@@ -111,10 +111,10 @@ class CL {
    largo = pf_palabra.length();
   
    // Solo palabras mas pequeñas que 7 van a ser diagonizables
-   if (largo >= 7 || diag_word >= 2)
+   if (largo >= 7 || diag_word > 2)
      {direccion = (int)(Math.random()*3);}
      else
-     {direccion = (int)(Math.random()*4) + 1; diag_word += 1;} 
+     {direccion = (int)(Math.random()*3) + 3; diag_word += 1;} 
  
    // Definir pesos deacuerdo a var direccion
    switch (direccion) {
@@ -139,6 +139,10 @@ class CL {
      Yweight = 1;
      break;
    case 5: // (4)diagonal SurEste
+     Xweight = 1;
+     Yweight = 1;
+     break;
+   case 6: // (4)diagonal SurEste
      Xweight = 1;
      Yweight = 1;
      break;
@@ -221,12 +225,12 @@ class CL {
    for (int x = 0; x < palabras8.length; x++) {
      if ( UI.inputSTR.equalsIgnoreCase(locations_table[x]) ) {
        palabras8[x] = palabras8[x].toUpperCase(); 
-       
+       locations_table[x] = "n/a";
        for (int i = 0; i < check.length; i++) {
          for (int j = 0; j < check.length; j++) {
            if (check[i][j] == x+1) {spa[i][j] = spa[i][j].toUpperCase();}}
          } // fin pasar a mayus en spa
-         
+
        UI.user_won += 1;
        } // fin checar variables
      } // fin revisar lista
