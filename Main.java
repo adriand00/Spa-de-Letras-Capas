@@ -1,4 +1,4 @@
-
+ 
 /*
 * Nombre del programa--- Spa De Letras
 * Descripción----------- Proyecto de Sopa de Letras
@@ -144,10 +144,8 @@ class UI {
      System.out.print("Ejemplo: A1-E12 >> ");
      //Leer guess del usuario
      user_Input('t');
-     // Ver si el guess de usuario esta en locations_table
-     for (int i = 0; i < CL.palabras8.length; i++)
-       if (inputSTR.equalsIgnoreCase(CL.locations_table[i]))
-       {CL.palabras8[i] = CL.palabras8[i].toUpperCase(); user_won += 1;}
+     // Rutina para checar el bateo del usuario
+     CL.checarbateo();
    }// fin impPlayZone
 /* Admin Tools */
   public static void error(int pf_Ecode) {

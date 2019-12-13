@@ -99,7 +99,7 @@ class CL {
    String letras = "---------------------------"; //ADMIN TOOL
    for (int i = 0; i < spa.length; i++) {//-----*navegar por  *
      for (int j = 0; j < spa.length; j++) {//---*toda la tabla*
-     int M = (int)(Math.random()*27); //variable temporal para almacenar un entero random
+     int M = (int)(Math.random()*27); // variable temporal para almacenar un entero random
      spa[i][j] =  Character.toString(letras.charAt(M));} //posiciona una letra de "letras" en la sopa
      }
    for (int i = 0; i < palabras8.length; i++) {
@@ -217,4 +217,18 @@ class CL {
    if (Yweight == 1) {Ystart = (int)(Math.random()*Ylimit);}
    if (Yweight == -1) {Ystart = Ylimit + (int)(Math.random()*(11-largo));}
    } // fin generarCoordenadas()
+ public static void checarbateo() {
+   for (int x = 0; x < palabras8.length; x++) {
+     if ( UI.inputSTR.equalsIgnoreCase(locations_table[x]) ) {
+       palabras8[x] = palabras8[x].toUpperCase(); 
+       
+       for (int i = 0; i < check.length; i++) {
+         for (int j = 0; j < check.length; j++) {
+           if (check[i][j] == x+1) {spa[i][j] = spa[i][j].toUpperCase();}}
+         } // fin pasar a mayus en spa
+         
+       UI.user_won += 1;
+       } // fin checar variables
+     } // fin revisar lista
+   }// fin pasarmayus()
 }// fin CapaLogica
