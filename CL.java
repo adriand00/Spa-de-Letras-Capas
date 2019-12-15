@@ -114,7 +114,7 @@ class CL {
    if (largo >= 7 || diag_word > 2)
      {direccion = (int)(Math.random()*3);}
      else
-     {direccion = (int)(Math.random()*3) + 3; diag_word += 1;} 
+     {direccion = (int)(Math.random()*3) + 2; diag_word += 1;} 
  
    // Definir pesos deacuerdo a var direccion
    switch (direccion) {
@@ -138,11 +138,7 @@ class CL {
      Xweight = 1;
      Yweight = 1;
      break;
-   case 5: // (4)diagonal SurEste
-     Xweight = 1;
-     Yweight = 1;
-     break;
-   case 6: // (4)diagonal SurEste
+   case 5: // (5)diagonal SurEste
      Xweight = 1;
      Yweight = 1;
      break;
@@ -172,12 +168,13 @@ class CL {
       if (Xweight < 0 || Yweight < 0) {  
       tempINT += check[Ystart - iYweight][Xstart - iXweight]; 
       }else{
-      tempINT += check[Ystart + iYweight][Xstart + Xweight] ;} }
+      tempINT += check[Ystart + iYweight][Xstart + Xweight] ;} 
+     }
      // Si tempINT > 0 = espacions ocupados, es necesario regenerar coordenadas
      if (tempINT > 0) { 
-       generarCordenadas(); tempINT = 0;
+       palabras8[current_word - 1] += tempINT + ">"; generarCordenadas(); Repetir = 1; tempINT = 0;
        } else {
-       Repetir = 0;} // Si no, pos romper el ciclo
+       palabras8[current_word - 1] += tempINT + "<"; tempINT = 0; Repetir = 0;} // Si no, pos romper el ciclo
      } // fin while
 
    //Una vez encotrados los campos, rellenarlos
@@ -186,26 +183,22 @@ class CL {
      int iYweight = i * Math.abs(Yweight);
      if (Xweight < 0 || Yweight < 0) { 
        // Rellenar check con los nuevos espacios ocupados
-       check[Ystart - iYweight][Xstart - iXweight] = current_word;
        // Rellenar sopa con las letras de la palabra
+       check[Ystart - iYweight][Xstart - iXweight] = current_word;
        spa[Ystart - iYweight][Xstart - iXweight] = Character.toString(pf_palabra.charAt(i));
-       // Guardar la posicion inicial de la palabra
-       if (i == 0) 
+       if (i == 0) // Guardar la posicion inicial de la palabra
        {locations_table[current_word - 1] = address_table[Ystart][Xstart];}
-       // Guardar la posicion final de la palabra 
-       if (i == (largo-1)) 
-       {locations_table[current_word - 1] +="-" + address_table[Ystart - iYweight][Xstart - iXweight];}
+       if (i == (largo-1)) // Guardar la posicion final de la palabra 
+       {locations_table[current_word - 1] += address_table[Ystart - iYweight][Xstart - iXweight];}
      } else {
        // Rellenar check con los nuevos espacios ocupados
-       check[Ystart + iYweight][Xstart + iXweight] = current_word;
        // Rellenar sopa con las letras de la palabra
+       check[Ystart + iYweight][Xstart + iXweight] = current_word;
        spa[Ystart + iYweight][Xstart + iXweight] = Character.toString(pf_palabra.charAt(i));
-       // Guardar la posicion inicial de la palabra
-       if (i == 0) 
+       if (i == 0) // Guardar la posicion inicial de la palabra
        {locations_table[current_word - 1] = address_table[Ystart][Xstart];}
-       // Guardar la posicion final de la palabra 
-       if (i == (largo-1)) 
-       {locations_table[current_word - 1] +="-" + address_table[Ystart + iYweight][Xstart + iXweight];}
+       if (i == (largo-1)) // Guardar la posicion final de la palabra 
+       {locations_table[current_word - 1] += address_table[Ystart + iYweight][Xstart + iXweight];}
      } } // Fin loop
      // Sumar que una palabra ya fue completada
    current_word += 1 ;

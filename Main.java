@@ -3,12 +3,11 @@
 * Nombre del programa--- Spa De Letras
 * Descripción----------- Proyecto de Sopa de Letras
 * Fecha de creación----- 24 Sep 2019
-* Autor----------------- Alonso Maria Jose ʕ •ᴥ•ʔ / Murillo Adrian =OwO=
+* Autor----------------- Alonso Maria Jose / Murillo Adrian =OwO=
 * Fecha de modificación- 
 * Modificado por-------- 
 */
-import java.util.*;
-
+import java.util.*; 
 class Main {
   public static void main(String[] arg) {
     UI.menu();
@@ -16,6 +15,7 @@ class Main {
     CL.crearPalabras8();
     CL.rellenarSopa();
     UI.jugar();
+    UI.gano();
     }// fin main
   }//fin main
 
@@ -101,6 +101,7 @@ class UI {
       impSopa();
       impLista8();
       impCheckTable();
+      impLocations();
       impPlayZone(); }
       while (user_won != 8);
      }//fin jugar
@@ -124,7 +125,6 @@ class UI {
     System.out.println("   A B C D E F G H I J K L");
     System.out.println("=============================");
     }// fin impSopa
-
  public static void impLista8() {
      System.out.println("Encuentra estas palabras:");
      CL.tempINT = 0;
@@ -147,6 +147,25 @@ class UI {
      // Rutina para checar el bateo del usuario
      CL.checarbateo();
    }// fin impPlayZone
+ public static void gano() {
+   do {
+   clearScreen();
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ＼");
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ＼");
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ＼");
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ＼");
+   clearScreen();
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ／");
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ／");
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ／");
+   System.out.println("FELICIDADES ＼ʕ •ᴥ•ʔ／");
+   clearScreen();
+   System.out.println("FELICIDADES ／ʕ •ᴥ•ʔ／");
+   System.out.println("FELICIDADES ／ʕ •ᴥ•ʔ／");
+   System.out.println("FELICIDADES ／ʕ •ᴥ•ʔ／");
+   System.out.println("FELICIDADES ／ʕ •ᴥ•ʔ／");
+   } while (true);
+   }
 /* Admin Tools */
   public static void error(int pf_Ecode) {
     switch (pf_Ecode) {

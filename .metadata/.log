@@ -1,443 +1,240 @@
-!SESSION 2019-12-07 12:52:14.790 -----------------------------------------------
+!SESSION 2019-12-15 05:02:10.572 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=11.0.4
 java.vendor=Ubuntu
 BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
 Command-line arguments:  -data /home/runner
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:34.191
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:23.729
 !MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:35.271
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:24.857
 !MESSAGE Main thread is waiting
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:35.466
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:25.130
 !MESSAGE >> initialize
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:35.468
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:25.131
 !MESSAGE Initializing Java Language Server 0.21.0.201806152234
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:35.970
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:25.442
 !MESSAGE >> initialized
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:36.276
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:25.966
 !MESSAGE Creating the default Java project
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:38.767
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:28.832
 !MESSAGE Finished creating the default Java project
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:56.771
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:52.952
 !MESSAGE Importing Eclipse project(s)
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:56.877
-!MESSAGE Workspace initialized in 21404ms
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:53.247
+!MESSAGE Workspace initialized in 28110ms
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:57.166
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:53.272
 !MESSAGE >> java/buildWorkspace (full)
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:52:57.466
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:02:53.482
 !MESSAGE >> document/didOpen
 
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:53:08.671
-!MESSAGE Error occured while building workspace. Details: 
-message: The project was not built since the source file /jdt.ls-java-project/src/CapaLogica.java could not be read;code: 0
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:10.381
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:01.931
 !MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/runner/Main.java
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:19.465
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:11.442
 !MESSAGE >> document/didOpen
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:27.875
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:18.642
 !MESSAGE begin problem for /Main.java
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:27.972
-!MESSAGE 0 problems reported for /Main.java
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.186
-!MESSAGE Reconciled 0, validated: 1. Took 8820 ms
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.677
-!MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/runner/CL.java
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.783
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.870
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.871
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.875
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.978
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:28.981
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:29.066
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:29.273
-!MESSAGE >> document/didChange
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:29.711
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:34.582
-!MESSAGE begin problem for /Main.java
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:34.669
-!MESSAGE The value of the local variable user_input_word is not used is of type LocalVariableIsNeverUsed
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:34.669
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:18.731
 !MESSAGE The value of the local variable borrar_entrada is not used is of type LocalVariableIsNeverUsed
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:34.670
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:18.765
+!MESSAGE The value of the local variable borrar_entrada is not used is of type LocalVariableIsNeverUsed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:18.830
 !MESSAGE 2 problems reported for /Main.java
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:35.484
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:18.885
+!MESSAGE Reconciled 0, validated: 1. Took 7453 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.167
+!MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/runner/CL.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.629
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.674
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.676
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.679
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.680
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.683
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.684
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.702
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.783
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.843
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.845
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.853
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.854
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.855
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.933
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:19.982
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.039
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.049
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.066
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.072
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.077
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.136
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.140
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.149
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.259
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.262
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.266
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.275
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.276
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.287
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.334
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.338
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.339
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.346
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.372
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.378
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.452
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.453
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.460
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.464
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.470
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.534
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.542
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.577
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.630
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.635
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.734
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.738
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.747
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:20.755
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:27.587
+!MESSAGE begin problem for /Main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:27.588
+!MESSAGE The value of the local variable borrar_entrada is not used is of type LocalVariableIsNeverUsed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:27.589
+!MESSAGE The value of the local variable borrar_entrada is not used is of type LocalVariableIsNeverUsed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:27.590
+!MESSAGE 2 problems reported for /Main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:28.838
 !MESSAGE begin problem for /CL.java
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:35.485
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:28.870
 !MESSAGE The value of the local variable random_done is not used is of type LocalVariableIsNeverUsed
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:35.485
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:28.870
 !MESSAGE 1 problems reported for /CL.java
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:53:35.486
-!MESSAGE Reconciled 0, validated: 2. Took 5321 ms
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:28.872
+!MESSAGE Reconciled 0, validated: 2. Took 5237 ms
 
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:54:22.048
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:55:05.666
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:55:05.766
-!MESSAGE >> document/documentHighlight
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:55:06.000
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:55:10.216
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:01.224
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:03.329
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:06.582
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:08.081
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:08.466
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:08.667
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:09.456
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:09.929
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:16.651
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:17.759
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:56:18.985
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:24.812
-!MESSAGE >> document/didOpen
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:24.814
-!MESSAGE >> document/didChange
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:38.151
-!MESSAGE >> document/didChange
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:38.432
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:38.438
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getStartOffset(DiagnosticsHelper.java:51)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:65)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:38.441
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getEndOffset(DiagnosticsHelper.java:36)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:66)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:40.666
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:40.766
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getStartOffset(DiagnosticsHelper.java:51)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:65)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:40.767
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getEndOffset(DiagnosticsHelper.java:36)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:66)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:42.630
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:42.631
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.JDTUtils.findElementsAtSelection(JDTUtils.java:536)
-	at org.eclipse.jdt.ls.core.internal.HoverInfoProvider.computeHover(HoverInfoProvider.java:79)
-	at org.eclipse.jdt.ls.core.internal.handlers.HoverHandler.computeHover(HoverHandler.java:47)
-	at org.eclipse.jdt.ls.core.internal.handlers.HoverHandler.hover(HoverHandler.java:38)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$6(JDTLanguageServer.java:463)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:44.025
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:44.027
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getStartOffset(DiagnosticsHelper.java:51)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:65)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:44.029
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getEndOffset(DiagnosticsHelper.java:36)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:66)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:48.297
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:48.365
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:48.667
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:48.869
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:50.130
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:50.173
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:57:50.430
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:50.432
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getStartOffset(DiagnosticsHelper.java:51)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:65)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:57:50.433
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getEndOffset(DiagnosticsHelper.java:36)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:66)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:58:10.948
-!MESSAGE >> document/didOpen
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:58:10.950
-!MESSAGE >> document/didChange
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:58:22.985
-!MESSAGE >> document/didChange
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:58:23.239
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:58:23.243
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getStartOffset(DiagnosticsHelper.java:51)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:65)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:58:23.246
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.corrections.DiagnosticsHelper.getEndOffset(DiagnosticsHelper.java:36)
-	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:66)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$12(JDTLanguageServer.java:528)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-07 12:58:28.285
-!MESSAGE >> document/hover
-
-!ENTRY org.eclipse.jdt.ls.core 4 0 2019-12-07 12:58:28.287
-!MESSAGE 
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.jface.text.ListLineTracker.getLineOffset(ListLineTracker.java:194)
-	at org.eclipse.jface.text.AbstractLineTracker.getLineOffset(AbstractLineTracker.java:157)
-	at org.eclipse.jface.text.AbstractDocument.getLineOffset(AbstractDocument.java:873)
-	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toOffset(JsonRpcHelpers.java:42)
-	at org.eclipse.jdt.ls.core.internal.JDTUtils.findElementsAtSelection(JDTUtils.java:536)
-	at org.eclipse.jdt.ls.core.internal.HoverInfoProvider.computeHover(HoverInfoProvider.java:79)
-	at org.eclipse.jdt.ls.core.internal.handlers.HoverHandler.computeHover(HoverHandler.java:47)
-	at org.eclipse.jdt.ls.core.internal.handlers.HoverHandler.hover(HoverHandler.java:38)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$6(JDTLanguageServer.java:463)
-	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$22(JDTLanguageServer.java:716)
-	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.202
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.221
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.315
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.325
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.592
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.617
-!MESSAGE >> document/didOpen
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:09.990
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:10.097
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:10.116
-!MESSAGE >> document/codeAction
-
-!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-11 08:00:10.121
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-12-15 05:03:30.768
 !MESSAGE >> document/codeAction

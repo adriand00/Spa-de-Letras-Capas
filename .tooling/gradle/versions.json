@@ -1,6 +1,6 @@
 [ {
-  "version" : "6.0.1-20191207000039+0000",
-  "buildTime" : "20191207000039+0000",
+  "version" : "6.1-20191215000028+0000",
+  "buildTime" : "20191215000028+0000",
   "current" : false,
   "snapshot" : true,
   "nightly" : false,
@@ -9,12 +9,12 @@
   "rcFor" : "",
   "milestoneFor" : "",
   "broken" : false,
-  "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.0.1-20191207000039+0000-bin.zip",
-  "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.0.1-20191207000039+0000-bin.zip.sha256",
-  "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.0.1-20191207000039+0000-wrapper.jar.sha256"
+  "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.1-20191215000028+0000-bin.zip",
+  "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.1-20191215000028+0000-bin.zip.sha256",
+  "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.1-20191215000028+0000-wrapper.jar.sha256"
 }, {
-  "version" : "6.1-20191206231008+0000",
-  "buildTime" : "20191206231008+0000",
+  "version" : "6.2-20191214230022+0000",
+  "buildTime" : "20191214230022+0000",
   "current" : false,
   "snapshot" : true,
   "nightly" : true,
@@ -23,9 +23,9 @@
   "rcFor" : "",
   "milestoneFor" : "",
   "broken" : false,
-  "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.1-20191206231008+0000-bin.zip",
-  "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.1-20191206231008+0000-bin.zip.sha256",
-  "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.1-20191206231008+0000-wrapper.jar.sha256"
+  "downloadUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.2-20191214230022+0000-bin.zip",
+  "checksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.2-20191214230022+0000-bin.zip.sha256",
+  "wrapperChecksumUrl" : "https://services.gradle.org/distributions-snapshots/gradle-6.2-20191214230022+0000-wrapper.jar.sha256"
 }, {
   "version" : "6.1-milestone-3",
   "buildTime" : "20191203141333+0000",
