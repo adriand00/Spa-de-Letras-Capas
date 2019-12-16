@@ -160,13 +160,13 @@ class CL {
    // Chequear donde haya espacio disponible para localizar la palabra
    tempINT = 0;      //var para llevar suma acarreada de espacios
    int Repetir = 1;  // bandera para romper ciclo
-   while (Repetir == 1) { // Checar por adelantado los espacios que ocupara la palabra, y ver si estan vacios
+   do { // Checar por adelantado los espacios que ocupara la palabra, y ver si estan vacios
      for (int i = 0; i < largo; i++) {
       int iXweight = i * Math.abs(Xweight);
       int iYweight = i * Math.abs(Yweight); 
       // Ver en que direccion debe hacer la suma
       if (Xweight < 0 || Yweight < 0) {  
-      tempINT += check[Ystart - iYweight][Xstart - iXweight]; 
+      if (check[Ystart - iYweight][Xstart - iXweight] == 0); 
       }else{
       tempINT += check[Ystart + iYweight][Xstart + Xweight] ;} 
      }
@@ -175,7 +175,7 @@ class CL {
        palabras8[current_word - 1] += tempINT + ">"; generarCordenadas(); Repetir = 1; tempINT = 0;
        } else {
        palabras8[current_word - 1] += tempINT + "<"; tempINT = 0; Repetir = 0;} // Si no, pos romper el ciclo
-     } // fin while
+     } while (Repetir == 1) // fin while
 
    //Una vez encotrados los campos, rellenarlos
    for (int i = 0; i < largo; i++) {
