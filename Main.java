@@ -141,7 +141,7 @@ class UI {
      System.out.println();
      System.out.println("Digita las coordenadas donde la");
      System.out.println("palabra empieza y donde termina.");
-     System.out.print("Ejemplo: A1-E12 >> ");
+     System.out.print("Ejemplo: a1e12 >> ");
      //Leer guess del usuario
      user_Input('t');
      // Rutina para checar el bateo del usuario
@@ -179,13 +179,19 @@ class UI {
    }// fin error
 
   public static void impCheckTable() {
-    System.out.println();
+   System.out.println();
     for (int i = 0; i < CL.check.length; i++) {
       for (int j = 0; j < CL.check.length; j++) {
-        System.out.print(CL.check[i][j] + " ");
-      }
-      System.out.println();
-    }
+        System.out.print(CL.check[i][j] + " ");}
+     System.out.println();}
+
+   System.out.println();
+
+    for (int i = 0; i < CL.listaocupados.length; i++) {
+        if (CL.listaocupados[i] != null )
+        {System.out.print(CL.listaocupados[i]);} else {System.out.print(".");} }
+
+   System.out.println();
    }// fin impCheckTable
 
   public static void impLocations() {
